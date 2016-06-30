@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e46ec254-dc6c-4861-aeff-a0da05e87010" name="Default" comment="" />
+    <list default="true" id="e46ec254-dc6c-4861-aeff-a0da05e87010" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/default.ejs" afterPath="$PROJECT_DIR$/views/default.ejs" />
+    </list>
     <ignored path="genie.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +36,8 @@
       <file leaf-file-name="default.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/default.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="16" column="76" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
+            <state relative-caret-position="246">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#4;n#div#0;n#form#0;n#div#0;n#div#0;n#section#5;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -287,12 +289,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1467234280543</updated>
-      <workItem from="1467234281858" duration="4416000" />
+      <workItem from="1467234281858" duration="4775000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4416000" />
+    <option name="totallyTimeSpent" value="4775000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="23" width="1280" height="967" extended-state="0" />
@@ -367,8 +369,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/default.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="16" column="76" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
+        <state relative-caret-position="246">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#4;n#div#0;n#form#0;n#div#0;n#div#0;n#section#5;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
