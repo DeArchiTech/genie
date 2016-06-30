@@ -1,785 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="utf-8">
-	<title>Easy A Solution</title>
-	<meta name="description" content="Easy A Solution App">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Corporal - Bootstrap Personal & Business Theme</title>
 
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
 
-	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 
-    <!-- Custom CSS -->
-    <link href="css/styles.css" rel="stylesheet">
+	<!-- Main Style -->
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
 
-    <!-- Count Down Timer-->
-	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+	<!-- Responsive Style -->
+	<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
 
-	dateFuture = new Date(2015,11,6,10,5,55);
+	<!--Icon Fonts-->
+	<link rel="stylesheet" media="screen" href="assets/fonts/font-awesome/font-awesome.min.css" />
 
-	function GetCount(){
 
-        dateNow = new Date();                                                                        //grab current date
-        amount = dateFuture.getTime() - dateNow.getTime();                //calc milliseconds between dates
-        delete dateNow;
+	<!-- Extras -->
+	<link rel="stylesheet" type="text/css" href="assets/extras/animate.css">
+	<link rel="stylesheet" type="text/css" href="assets/extras/lightbox.css">
 
-        // time is already past
-        if(amount < 0){
-                document.getElementById('countbox').innerHTML="Now!";
-        }
-        // date is still good
-        else{
-                days=0;hours=0;mins=0;secs=0;out="";
 
-                amount = Math.floor(amount/1000);//kill the "milliseconds" so just secs
+	<!-- jQuery Load -->
+	<script src="assets/js/jquery-min.js"></script>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 
-                days=Math.floor(amount/86400);//days
-                amount=amount%86400;
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
 
-                hours=Math.floor(amount/3600);//hours
-                amount=amount%3600;
-
-                mins=Math.floor(amount/60);//minutes
-                amount=amount%60;
-
-                secs=Math.floor(amount);//seconds
-
-                if(days != 0){out += days +" day"+((days!=1)?"s":"")+", ";}
-                if(days != 0 || hours != 0){out += hours +" hour"+((hours!=1)?"s":"")+", ";}
-                if(days != 0 || hours != 0 || mins != 0){out += mins +" minute"+((mins!=1)?"s":"")+", ";}
-                out += secs +" seconds";
-                document.getElementById('countbox').innerHTML=out;
-
-                setTimeout("GetCount()", 1000);
-    	    }
-	}
-
-	window.onload=function(){GetCount();}//call when everything has loaded
-
-	</script>
-	
-	
 </head>
 
-		<style>
-		body{
-			padding-top: 40px;
-		}
-		</style>
-<body>
-
-<body data-spy="scroll" data-target="#my-navbar" class="<%= classname %>">
-
-  <!-- Navbar -->
-  	<nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
-  		<div class="container">
-  			<div class="navbar-header">
-  				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-  					<span class="icon-bar"></span>
-  					<span class="icon-bar"></span>
-  					<span class="icon-bar"></span>
-  					<span class="icon-bar"></span>
-  				</button>
-
-  				<a href="" class="navbar-brand">Easy A Solution</a>
-  			</div><!-- Navbar Header-->
-  			<div class="collapse navbar-collapse" id="navbar-collapse">
-  				
-  			<a href="#feedback" class="btn btn-info navbar-btn navbar-right btn-md">Free Ebook!</a>
-  				<ul class="nav navbar-nav">
-  					<li><a href="#feedback">Feedback</a> 
-  					<li><a href="#aboutus">About Us</a> 
-  					<li><a href="#blog">Blog</a> 
-  					<li><a href="#options">Options</a> 
-  					<li><a href="#faq">Faq</a> 
-  					<li><a href="#contact">ContactUs</a> 
-  				</ul>
-  			</div>
-  		</div><!-- End Container-->
-
-  	</nav><!-- End navbar -->
-
-
-  	<!-- jumbotron-->
-	<div class="jumbotron">
-		<div class="container text-center">
-				<h1>Easy A Solution</h1>
-				<p>The one stop to all of your tutoring needs</p>
-				<div class="btn-group">
-					<a href="#contact" class="btn btn-md btn-info">Skype</a>
-					<a href="#contact" class="btn btn-md btn-default">Discounted Group</a>
-					<a href="#contact" class="btn btn-md btn-warning">1on1</a>
-				</div>
-		</div>
-	</div><!-- End jumbotron -->
-
-	<div class="container">
-		<section>
-
-			<div class="page-header" id="feedback">
-				<h2>Feedback.<small> Testimonials from our Top Students</small></h2>
-			</div>
-
-			<div class="row">
-				<div class="col-md-3">
-					<blockquote>
-						<p>David gave great explaination to the hardest differential calculus problems.  On top of that, the tips David gave on "How to take the SAT" really helped me to get the 2300 score that I needed for my Engineering Degree!</p>
-						<footer>Sandra Au</footer>
-					</blockquote>
-				</div>
-				<div class="col-md-3">
-					<blockquote>
-						<p>David explained the problems with easy to understand step by step diagrams.  Not only this made me understand it easier, but it also help me to remember the concepts afterwards.  David's trigonometry cheat sheet proved to be very useful after all!</p>
-						<footer>Julie Kim</footer>
-					</blockquote>
-				</div>
-				<div class="col-md-3">
-					<blockquote>
-						<p>It is always good to know that your tutor is not only familiar with the materials, but you can give them an extra level of TRUST when you know they use the skills day to day.  Peter showed me multiple tricks and shortcuts that he uses himself on his Actuarial Exams which proved to be a game changer!</p>
-						<footer>Ben Wong</footer>
-					</blockquote>
-				</div>
-				<div class="col-md-3">
-					<blockquote>
-						<p>If you want good grades with minimal effort, make sure you study with Kat.  Her exams studying technique helped me to increase my grades by 20% with just the same amount of time studying the material</p>
-						<footer>Brian Chui</footer>
-					</blockquote>
-				</div>
-			</div>
-		</section>
-	</div>
-
-	<!-- call to action -->
-	<section>
-		<div class="well">
-			<div class="container text-center">
-				<h2>
-				Subscribe to get our FREE Ebook
-				</h2>				
-				<hr>
-
-				<h3>
-				"How to ACE the SAT when you're just above average!"
-				</h3>
-
-				<hr>
-
-				<div class="row text-center">
-
-					<h4>
-						<font color="red">
-							Promotion Ends In
-						</font>
-					</h4>
-
-					<h4>
-						<div id="countbox"></div>
-					</h4>
-
-				</div>
-
-				<hr>
-
-	  			<div class="alert alert-info" id="firstSubscribeAlert">
-	    			<a href="#" class="close" data-dismiss="alert">&times;</a>
-	    			<strong>Success!</strong> Thank you for suscribing, you will recieve the Ebook in your email when it comes out 
-				</div>
-
-				<form action="subscribe" class="form-inline">
-
-					<div class="col-sm-4">
-						<div class="form-group">
-							<label for="subscription">Subscribe</label>
-							<input type="text" class="form-control" name="subscription" id="subscription" placeholder="Yourname">
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<div class="form-group">
-							<label for="email">Email address</label>
-							<input type="text" class="form-control" name="email" id="email" placeholder="Enter your email">
-						</div>
-					</div>
-
-					<div class="col-sm-4">
-						<button type="submit" class="btn btn-danger btn-lg pull-right"
-						id="firstSubscribeBtn">Subscribe</button>
-
-					</div>
-
-					<hr>
-				</form>
-
-			</div>
-
-		<div>
-
-	</section>
-
-	 <!-- Page Content -->
-    <div class="container">
-    	<section>
-        <!-- Introduction Row -->
-        <div class="row">
-            <div class="col-lg-12">
-
-            	<div class="page-header" id="aboutus">
-					<h2>About Us<small> Our mission is to help you get the A you deserve</small></h2>
-				</div>
-
-                <p>Easy A's mission is to help you get that A with the most efficient study method as possible.  With years of experience in the business, we are capable of finding you the perfect solution to any of your educational enquires.  This includes finding you the perfect tutor, fixing any bad exam taking habits and major specialization consultation.  We have expertise in tutoring "Hard Sciences" since we find that our students often struggle with it the most(Math/Statistic/Physics ...etc), however our instructors have a vast majority of background and we are more than capable of answering any of your question.</p>
-            </div>
-        </div>
-
-        <!-- Team Members Row -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="page-header">Meet Our Team</h2>
-            </div>
-            <div class="col-sm-4 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center center-block" src="14.png" alt="">
-                <h3>Jacky Lee
-                    <small>CEO</small>
-                </h3>
-                <p>Jacky is employed as an analyst in one of the top four Actuarial companies at the Financial District of San Francisco.  He is a former graduate of USC with a degree in Applied Math.  He co-founded EasyA due to his passion for Math and his desire to contribute back to the world of education.</p>
-            </div>
-            <div class="col-sm-4 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center center-block" src="13.png" alt="">
-                <h3>David Chan
-                    <small>Co-Founder</small>
-                </h3>
-                <p>David works as a Software Engineer at a Hot Silicon Valley Start Up.  On top of that he is a graduate of UBC with a Bachelors in Mathematics and Computer Science.  David enjoys reading english literature and write iOS applications.</p>
-            </div>
-
-            <div class="col-sm-4 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center center-block" src="15.png" alt="">
-                <h3>Kat Poon
-                    <small>Exec-Instructor</small>
-                </h3>
-                <p>Kat was a UBC graduate with a double major in Philosophy and Psycology.  She scored in the Top 5 percentile on SAT Reading, Writing and Mathematics.  When she is not working as a Business Analyst, she is a food and travel blogger.</p>
-            </div>
-        </div>
-
-        </section>
-    </div>
-    <!-- /.container -->
-
-	<!-- options -->
-	<div class="container">
-		<section>
-			<div class="page-header" id="options">
-				<h2>Options.<small> The tutoring options we provide to our students are as follows</small></h2>
-			</div><!-- End Page Header -->
-
-			<div class="row">
-
-				<div class="col-sm-6">
-					<h3>1 on 1 Private Tutoring</h3>
-					<p>This is the best option for students who needs a lot of questions to be answered.  This is the perfect option for students who wants to have a drastic jump in their academic grades</p>
-				</div>
-
-				<div class="col-sm-6">
-					<img src="1.png" class="img-circle img-responsive img-center" alt="image">
-				</div>
-
-			</div><!-- End Page Header -->
-
-			<hr>
-
-			<div class="row">
-
-				<div class="col-sm-6">
-					<h3>Discounted Group Rates</h3>
-					<p>Students can get up to 75% off when they book as a group!  This option is best for students who needs help but not too much.  Perfect for friends who take classes/exams together.</p>
-				</div>
-
-				<div class="col-sm-6">
-					<img src="2.png" class="img-circle img-responsive img-center" alt="image">
-				</div>
-
-			</div><!-- End Page Header -->
-
-			<hr>
-
-			<div class="row">
-
-				<div class="col-sm-6">
-					<h3>Online-tutoring</h3>
-					<p>Have the convienece of getting tutor from anywhere as long as you have your internet connection!  This option is best for students who needs help but maybe just once in a while.</p>
-				</div>
-
-				<div class="col-sm-6">
-					<img src="3.png" class="img-circle img-responsive img-center" alt="image">
-				</div>
-			</div>
-			
-		</section>
-	</div>
-
-	<div class="container">
-		<section>
-			
-			<div class="page-header" id="packages">
-				<h2>Learning Packages<small> Best way to upstart your education</small></h2>
-			</div>
-
-			<hr>
-
-			<div class="row">
-				<div class="col-sm-4">
-					<div class="panel panel-default text-center">
-						<div class="panel-body text-cemter">
-							<img src="16.png" class="center-block" alt="image">
-							<h4>Bronze Package</h4>		
-							<li>UNLIMITED video lectures</li>
-							<li>UNLIMITED instructor written solutions</li>
-							<li>FREE Ebook on "How To Ace The SAT"</li>	
-							<font color="green">
-								<h3>$19.99 monthly</h3>
-							</font>						
-						</div>
-					</div>
-				</div>
-
-				<div class="col-sm-4">
-					<div class="panel panel-default text-center">
-						<div class="panel-body">
-							<img src="17.png" class="center-block" alt="image">
-							<h4>Silver Package</h4>
-							<li>EVERYTHING in bronze</li>
-							<li>4 Sessions of live one on one tutoring with top instructors</li>
-							<li>UNLIMITED inquries</li>	
-							<font color="blue">
-								<h3>$99.99 monthly</h3>
-							</font>		
-						</div>
-					</div>
-				</div>
-
-				<div class="col-sm-4">
-					<div class="panel panel-default text-center">
-						<div class="panel-body">
-							<img src="18.png" class="center-block" alt="image">
-							<h4>Gold Package</h4>
-							<li>EVERYTHING in silver</li>
-							<li>FREE college admission consultation</li>
-							<li>UNLIMITED weekdays one on one tutoring</li>	
-							<font color="red">
-								<h3>$399.99 monthly</h3>
-							</font>		
-						</div>
-					</div>
-				</div>
-
-				<!-- Pay Pal Stuff 
-
-					<address>
-					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-					<input type="hidden" name="cmd" value="_s-xclick">
-					<input type="hidden" name="hosted_button_id" value="4QFD9DJCR94UQ">
-					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-					</form>	
-
-				-->
-
-			</div><!-- End of Row-->
-
-		</section>
-	</div>
-
-	<div class="container">
-		<section>
-			<div class="page_header" id="faq">
-				<h2>FAQ.<small> From parents and students</small></h2>
-			</div><!-- End Page header -->
-			<hr>
-			<div class="panel-group" id="accordion">
-
-				<div class="panel panel-default">
-					<div class="panel-heading">
-
-						<div class="panel-title">
-							<a href="#collapse-1" data-toggle="collapse" data-parent="#accordion">
-								Who will be teaching me?
-							</a>
-						</div><!-- End panel title -->
-
-						<div id="collapse-1" class="panel-collapse collapse in">
-							<div class="panel-body">
-								Both of the Lead Executive Instructors are former Bachelors of Mathematics Graduate.  David is currently working as a Mobile Developer at a Silicon Valley Start Up and Jacky is on his way to his FCA Actuarial credentials.
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="panel panel-default">
-					<div class="panel-heading">
-
-						<div class="panel-title">
-							<a href="#collapse-2" data-toggle="collapse" data-parent="#accordion">
-								What do you guys specializes in teaching?
-							</a>
-						</div><!-- End panel title -->
-
-						<div id="collapse-2" class="panel-collapse collapse">
-							<div class="panel-body">
-								We specializes in tutoring SAT Mathematics, University level Calculus, Algebra, Physics and any other technical Sciences
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="panel panel-default">
-					<div class="panel-heading">
-
-						<div class="panel-title">
-							<a href="#collapse-3" data-toggle="collapse" data-parent="#accordion">
-								Where will the teaching take place?
-							</a>
-						</div><!-- End panel title -->
-
-						<div id="collapse-3" class="panel-collapse collapse">
-							<div class="panel-body">
-								Students can choose to get the tutoring in our tutoring center, at the student’s house, online or at a public school or library.  All at varying cost
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="panel panel-default">
-					<div class="panel-heading">
-
-						<div class="panel-title">
-							<a href="#collapse-4" data-toggle="collapse" data-parent="#accordion">
-								When can I get my first lesson?
-							</a>
-						</div><!-- End panel title -->
-
-						<div id="collapse-4" class="panel-collapse collapse">
-							<div class="panel-body">
-								As early as the next day!  Give us a shout!
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="panel panel-default">
-					<div class="panel-heading">
-
-						<div class="panel-title">
-							<a href="#collapse-5" data-toggle="collapse" data-parent="#accordion">
-								Why should we choose you over other agency?
-							</a>
-						</div><!-- End panel title -->
-
-						<div id="collapse-5" class="panel-collapse collapse">
-							<div class="panel-body">
-							We provide a different service than most agency.  We are geniunely interested in BOTH helping the student to UNDERSTAND the material and TIPS/TRICKS on how to score higher grades.  On top of that, here are some of the highlights of Easy A Solution<br><br>
-
-							<ul>
-							<li>Founders hold Mathematics Degrees</li>
-							<li>Founders have over 15 years of experience combined</li>
-							<li>Online Tutoring Service </li>
-							<li>At home Tutoring Service </li>
-							<li>24/hr Question Support </li>
-							<li>Universal Exam Writing tips </li>
-							</ul>
-
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="panel panel-default">
-					<div class="panel-heading">
-
-						<div class="panel-title">
-							<a href="#collapse-6" data-toggle="collapse" data-parent="#accordion">
-								How much does it usually cost?
-							</a>
-						</div><!-- End panel title -->
-
-						<div id="collapse-6" class="panel-collapse collapse">
-							<div class="panel-body">
-								For the most basic kind of tutoring such as SAT Mathematics Tutoring, we charge a rate of $30/hr.  
-								There is a small traveling fee if it is at the tutee's house (Compensate for the Uber Ride) and it is a bit cheaper if the tutoring session is done online.
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</section>
-	</div>     
-
-
-	<!-- Blog -->
-	<div class="container">
-		<section>
-
-			<div class="page_header" id="blog">
-				<h2>Blog Posts<small> Instructor's top posts and videos</small></h2>
-			</div><!-- End Page header -->
-
-			<hr>
-			<script async src="https://static.medium.com/embed.js"></script>
-
-				<div class="row">	
-					
-					<div class="col-md-4">
-						<div class="embed-responsive embed-responsive-4by3">	
-							<a class="m-story" data-collapsed="true" href="https://medium.com/@easyasolution/5-ways-to-getting-better-grades-without-actually-studying-ba6c38a0ec3b">5 ways to getting better SAT Results without actually studying</a>
-						</div>
-					</div>
-
-					<hr>
-					
-					<div class="col-md-4">
-	                        <div class="embed-responsive embed-responsive-16by9">
-	                            <iframe src="//player.vimeo.com/video/22428395"></iframe>
-	                        </div>
-					</div>
-					
-					<hr>
-					
-					<div class="col-md-4">
-	                        <div class="embed-responsive embed-responsive-16by9">
-								<iframe width="420" height="315" src="https://www.youtube.com/embed/Zx9_ja_2H38" frameborder="0" allowfullscreen></iframe>
-	                        </div>
-					</div>
-
-					<hr>
-
-				</div>
-
-		</section>
-
-	</div>
-
-	<!-- Gallery -->
-	<div class="container">
-		<section>
-				
-			<div class="page-header" id="gallery">
-				<h2>Gallery.<small> What to expect from our service</small></h2>
-			</div>
-
-				<div class="carousel slide" id="screenshot-carousel" data-ride="carousel">
-
-					<ol class="carousel-indicators">
-						<li data-target="#screenshot-carousel" data-slide-to="0" class="active">
-						</li>
-						<li data-target="#screenshot-carousel" data-slide-to="1"></li>
-						<li data-target="#screenshot-carousel" data-slide-to="2"></li>
-						<li data-target="#screenshot-carousel" data-slide-to="3"></li>
-					</ol>
-
-					<div class="carousel-inner">
-						<div class="item active">
-							<img src="4.png" alt="Text of the image">
-							<div class="carousel-caption">
-								<h3>A+ Grades</h3>
-								<p>Get those A+ that you have always been longing for</p>
-							</div>
-						</div>
-						<div class="item">
-							<img src="5.png" alt="Text of the image">
-							<div class="carousel-caption">
-								<h3>Career accomplishments</h3>
-								<p>Set you on the right path for any career you wish</p>
-							</div>
-						</div>
-						<div class="item">
-							<img src="6.png" alt="Text of the image">
-							<div class="carousel-caption">
-								<h3>Increased Overall Confidence</h3>
-								<p>Doing good adcademically has never been this easy before</p>
-							</div>
-						</div>
-						<div class="item">
-							<img src="7.png" alt="Text of the image">
-							<div class="carousel-caption">
-								<h3>Save Time</h3>
-								<p>Get the grades you want with half the effort with our exam studying methods</p>
-							</div>
-						</div>
-					</div><!-- End Carousel inner-->
-					<a href="#screenshot-carousel" class="left carousel-control" 
-					data-slide="prev">
-						<span class="glyphicon glyphicon-chevron-left"></span>
-					</a>
-
-					<a href="#screenshot-carousel" class="right carousel-control" 
-					data-slide="next">
-						<span class="glyphicon glyphicon-chevron-right"></span>
-					</a>
-				</div><!-- End Carousel -->
-		</section>
-		<br>
-	<div>
-
-	<!-- Contact -->
-	<div class="page-header" id="contact">
-				<h2>Contact Us<small> We will respond back to within 48 hours</small></h2>
-	</div>	
-
-	<div class="container">
-
-		  	<div class="alert alert-info" id="contactAlert">
-		   			<a href="#" class="close" data-dismiss="alert">&times;</a>
-	   				<strong>Success!</strong> Thank you for contacting us, our team will respond back within 24 hrs
-			</div>
-
-			<div class="row">
-
-				<div class="col-lg-12">
-					<form action="/contact" class="form-horizontal">
-
-						<div class="form-group">
-							<label for="username" class="col-lg-2 control-label">Name
-							</label>
-							<div class="col-lg-10">
-								<input type="text" class="form-control" name="username" placeholder="Enter your name">
-							</div>
-						</div><!-- End of Form group-->
-
-						<div class="form-group">
-							<label for="email" class="col-lg-2 control-label">Email
-							</label>
-							<div class="col-lg-10">
-								<input type="text" class="form-control" name="email" placeholder="Enter your email">
-							</div>
-						</div><!-- End of Form group-->
-
-						<div class="form-group">
-							<label for="usernum" class="col-lg-2 control-label">Phone Number
-							</label>
-							<div class="col-lg-10">
-								<input type="text" class="form-control" name="usernum" placeholder="Enter your number">
-							</div>
-						</div><!-- End of Form group-->
-
-						<div class="form-group">
-							<label for="usermessage" class="col-lg-2 control-label">Message
-							</label>
-
-							<div class="col-lg-10">
-								<textarea name="usermessage" id="usermessage" class="form-control" cols="20" rows="10" placeholder="Enter your Message"></textarea>
-							</div>
-						
-						</div><!-- End of Form group-->
-
-						<div class="form-group">
-							<div class="col-lg-10 col-lg-offset-2">
-								<button type="submit" class="btn btn-primary" id="contactBtn">
-								Submit
-								</button>
-							</div>
-						</div>
-
-					</form>	
-
-				</div>
-				
-			</div>
-
-			<hr>
-
-			<div class="col-sm-4 text-center">
-					
-				<address>
-					<strong>Easy A Solution HQ.</strong></br>
-						1489 Webster Street</br>
-						San Francisco</br>
-						California, 94115</br>
-				</address>
-
-			</div>
-
-			<div class="col-sm-4 text-center">
-					
-				<address>
-					<strong>Los Angeles Office</strong></br>
-						265 S Western Ave</br>
-						Los Angeles</br>
-						California, 90004</br>
-				</address>
-
-			</div>
-
-			<div class="col-sm-4 text-center">
-					
-				<address>
-					<strong>Vancouver Office</strong></br>
-						128 W Hastings St</br>
-						Vancouver</br>
-						British Columbia, V6E 1B5</br>
-				</address>
-
-			</div>
-
-		</section>
-	</div>
-
-	<footer>
-		<hr>
+<body data-spy="scroll" data-offset="20" data-target="#navbar">
+<!-- Nav Menu Section -->
+<div class="logo-menu">
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="50">
 		<div class="container">
-			<div class="container text-center">
-			<h3>Subscribe for more free stuff</h3>
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header col-md-3">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#home"><i class="fa fa-briefcase"></i> Corporal</a>
+			</div>
 
-			<hr>
+			<div class="collapse navbar-collapse" id="navbar">
+				<ul class="nav navbar-nav col-md-9 pull-right">
+					<li class="active"><a href="#hero-area"><i class="fa fa-home"></i> Home</a></li>
+					<li><a href="#services"><i class="fa fa-cogs"></i> Services</a></li>
+					<li><a href="#portfolio"><i class="fa fa-flask"></i> Portfolio</a></li>
+					<li><a href="#clients"><i class="fa fa-puzzle-piece"></i> Clients</a></li>
+					<li><a href="#about"><i class="fa fa-info"></i> About</a></li>
+					<li><a href="#contact"><i class="fa fa-envelope"></i> Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</div>
+<!-- Nav Menu Section End -->
 
-			<form action="subscribe" class="form-inline">
+<!-- Hero Area Section -->
 
-				<div class="form-group">
-					<label for="subscription">Subscribe</label>
-					<input type="text" class="form-control" name="subscription" id="subscription" placeholder="Your name">
+<section id="hero-area">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 class="title">Corporal - Bootstrap Theme</h1>
+				<h2 class="subtitle">Start your Business or Personal site right now!</h2>
+
+				<img class="col-md-6 col-sm-6 col-xs-12 animated fadeInLeft" src="assets/img/hero/macbook.png" alt="">
+
+				<div class="col-md-6 col-sm-6 col-xs-12 animated fadeInRight delay-0-5">
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+					<a href="#" class="btn btn-common btn-lg">Donload Now!</a>
+					<a href="#" class="btn btn-primary btn-lg">Learn More</a>
 				</div>
 
-				<div class="form-group">
-					<label for="email">Email address</label>
-					<input type="text" class="form-control" name="email" id="email" placeholder="Enter your email">
-				</div>
-				<button type="submit" class="btn btn-default" id="secondSubscribeBtn">Subscribe</button>
-				<hr>
+			</div>
 
+		</div>
+	</div>
+</section>
+
+<!-- Hero Area Section End-->
+
+
+
+<!-- Service Section -->
+
+<section id="services">
+	<div class="container text-center">
+		<div class="row">
+			<h1 class="title">What we do</h1>
+			<h2 class="subtitle">Lorem Ipsum is simply dummy text</h2>
+
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+				<div class="service-item">
+					<img src="assets/img/services/responsive.png" alt="">
+					<h3>Fully Responsive</h3>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
+				</div>
+			</div>
+
+
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+				<div class="service-item">
+					<img src="assets/img/services/bs3.png" alt="">
+					<h3>Bootstrap 3</h3>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+				<div class="service-item">
+					<img src="assets/img/services/free.png" alt="">
+					<h3>100% Free</h3>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+<!-- Service Section End -->
+
+
+
+<!-- Portfolio Section -->
+
+<section id="portfolio">
+	<div class="container">
+		<div class="row">
+			<h1 class="title">Portfolio</h1>
+			<h2 class="subtitle">Lorem Ipsum is simply dummy text</h2>
+
+
+
+			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+				<div class="portfolio-item wow fadeInLeft" data-wow-delay=".5s">
+					<a href="#"><img src="assets/img/portfolio/img1.jpg" alt=""></a>
+					<div class="overlay">
+						<div class="icons">
+							<a data-lightbox="image1" href="assets/img/portfolio/img1.jpg" class="preview"><i class="fa fa-search-plus fa-4x"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+				<div class="portfolio-item wow fadeInLeft" data-wow-delay=".7s">
+					<a href="#"><img src="assets/img/portfolio/img2.jpg" alt=""></a>
+					<div class="overlay">
+						<div class="icons">
+							<a data-lightbox="image1" href="assets/img/portfolio/img2.jpg" class="preview"><i class="fa fa-search-plus fa-4x"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+				<div class="portfolio-item wow fadeInLeft" data-wow-delay=".9s">
+					<a href="#"><img src="assets/img/portfolio/img3.jpg" alt=""></a>
+					<div class="overlay">
+						<div class="icons">
+							<a data-lightbox="image1" href="assets/img/portfolio/img3.jpg" class="preview"><i class="fa fa-search-plus fa-4x"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay="1.1s">
+				<div class="portfolio-item">
+					<a href="#"><img src="assets/img/portfolio/img4.jpg" alt=""></a>
+					<div class="overlay">
+						<div class="icons">
+							<a data-lightbox="image1" href="assets/img/portfolio/img4.jpg" class="preview"><i class="fa fa-search-plus fa-4x"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay="1.3s">
+				<div class="portfolio-item">
+					<a href="#"><img src="assets/img/portfolio/img5.jpg" alt=""></a>
+					<div class="overlay">
+						<div class="icons">
+							<a data-lightbox="image1" href="assets/img/portfolio/img5.jpg" class="preview"><i class="fa fa-search-plus fa-4x"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay="1.5s">
+				<div class="portfolio-item">
+					<a href="#"><img src="assets/img/portfolio/img6.jpg" alt=""></a>
+					<div class="overlay">
+						<div class="icons">
+							<a data-lightbox="image1" href="assets/img/portfolio/img6.jpg" class="preview"><i class="fa fa-search-plus fa-4x"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+<!-- Portfolio Section End -->
+
+
+<!-- Client Section -->
+<section id="clients">
+	<div class="container">
+		<div class="row">
+
+			<h1 class="title">Clients</h1>
+			<h2 class="subtitle">Lorem Ipsum is simply dummy text</h2>
+
+			<div class="wow fadeInDown">
+				<img class="col-md-3 col-md-3 col-sm-3 col-xs-12" src="assets/img/clients/img1.png" alt="client-1">
+
+				<img class="col-md-3 col-md-3 col-sm-3 col-xs-12" src="assets/img/clients/img2.png" alt="client-2">
+
+				<img class="col-md-3 col-md-3 col-sm-3 col-xs-12" src="assets/img/clients/img3.png" alt="client-3">
+
+				<img class="col-md-3 col-md-3 col-sm-3 col-xs-12" src="assets/img/clients/img4.png" alt="client-4">
+
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Client Section End -->
+
+
+
+<!-- About Section -->
+
+<section id="about">
+	<div class="container">
+		<div class="row">
+			<h1 class="title">About us</h1>
+			<h2 class="subtitle">Lorem Ipsum is simply dummy text</h2>
+
+			<div class="col-md-8 col-sm-12">
+				<p>
+					A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+				</p>
+			</div>
+
+			<img class="col-md-4 col-md-4 col-sm-12 col-xs-12" src="assets/img/about/graph.png" alt="">
+
+		</div>
+	</div>
+</section>
+<!-- About Section End -->
+
+
+
+<!-- Conatct Section -->
+<section id="contact">
+	<div class="container text-center">
+		<div class="row">
+			<h1 class="title">Contact us</h1>
+
+			<h2 class="subtitle">Lorem Ipsum is simply dummy text</h2>
+
+
+			<form role="form" class="contact-form" method="post">
+				<div class="col-md-6 wow fadeInLeft" data-wow-delay=".5s">
+					<div class="form-group">
+						<div class="controls">
+							<input type="text" class="form-control" placeholder="Name" name="name">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="controls">
+							<input type="email" class="form-control email" placeholder="Email" name="email">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="controls">
+							<input type="text" class="form-control requiredField" placeholder="Subject" name="subject">
+						</div>
+					</div>
+
+					<div class="form-group">
+
+						<div class="controls">
+							<textarea rows="7" class="form-control" placeholder="Message" name="message"></textarea>
+						</div>
+					</div>
+					<button type="submit" id="submit" class="btn btn-lg btn-common">Send</button><div id="success" style="color:#34495e;"></div>
+
+				</div>
 			</form>
 
-			<div class="alert alert-info" id="secondSubscribeAlert">
-				<a href="#" class="close" data-dismiss="alert">&times;</a>
-	    		<strong>Success!</strong> Thank you for contacting us, our team will respond back within 24 hrs
+			<div class="col-md-6 wow fadeInRight">
+				<div class="social-links">
+					<a class="social" href="#" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+					<a class="social" href="#" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+					<a class="social" href="#" target="_blank"><i class="fa fa-google-plus fa-2x"></i></a>
+					<a class="social" href="#" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
+				</div>
+				<div class="contact-info">
+					<p><i class="fa fa-map-marker"></i> Seattle, WA 00000, USA</p>
+					<p><i class="fa fa-envelope"></i> info@yourwebsite.com</p>
+				</div>
+
+				<p>
+					A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit.<br>
+				</p>
+
 			</div>
 
-			<hr>
-
-			<ul class="list-inline">
-				<li><a href="">Twitter</a></li>
-				<li><a href="">Facebook</a></li>
-				<li><a href="">Youtube</a></li>
-			</ul>
-
-			<p>&copy;Copyright @ 2015</p>
-
-			<p>contactus@easyasolution.com<p>
-
-			<hr>
-			</div>
 		</div>
+	</div>
+</section>
 
-	</footer>
+<!-- Conatct Section End-->
 
-	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-	<script src="js/script.js"></script>
-	
-</body>	
+<div id="copyright">
+	<div class="container">
+		<div class="col-md-10"><p>© Corporal 2014 All right reserved. Design & Developed by <a href="http://graygrids.com">GrayGrids</a></p></div>
+		<div class="col-md-2">
+			<span class="to-top pull-right"><a href="#hero-area"><i class="fa fa-angle-up fa-2x"></i></a></span>
+		</div>
+	</div>
+</div>
+<!-- Copyright Section End-->
+
+<!-- Bootstrap JS -->
+<script src="assets/js/bootstrap.min.js"></script>
+
+<!-- Smooth Scroll -->
+<!-- Smooth Scroll -->
+<script src="assets/js/smooth-scroll.js"></script>
+<script src="assets/js/lightbox.min.js"></script>
+
+<!-- All JS plugin Triggers -->
+<script src="assets/js/main.js"></script>
+
+
+
+</body>
 </html>
